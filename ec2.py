@@ -1,8 +1,8 @@
 import boto3
 
 # Replace with your AWS access key and secret key
-aws_access_key = 'AKIAURISP2E6QRX54ANJ'
-aws_secret_key = 'qSWHjeFTgXxeNcaplrBhnAc7YphQYSsF2FD2pFFE'
+aws_access_key = 'AJ'
+aws_secret_key = 'E'
 aws_region = 'us-east-1'
 
 # Create an EC2 client
