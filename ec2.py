@@ -26,7 +26,7 @@ for reservation in response['Reservations']:
         instances.append(instance_details)
 
 # Print and append to file
-output_file_path = 'ec2.ini'
+output_file_path = 'inventory.ini'
 
 with open(output_file_path, 'w') as output_file:
     for instance in instances:
