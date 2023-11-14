@@ -1,5 +1,5 @@
 - name: testing the variables
-  hosts: locahost
+  hosts: localhost
   tasks:
   - name: getting the variables from the command line
     annsible.builtin.debug:
