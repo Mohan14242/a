@@ -1,12 +1,8 @@
 - name: testing the variables
   hosts: localhost
-  vars_prompt:
-    - name: name
-      prompt: please enter you name 
-      private: false
-    - name: age 
-      prompt: please enter your age 
-      private: true
+  vars:
+    name: mohan
+    age: 25
   tasks:
   - name: displaying the multiple variables
     ansible.builtin.debug:
