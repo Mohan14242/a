@@ -1,6 +1,8 @@
 - name: testing the variables
   hosts: localhost
+  vars:
+  - name: "mohan"
   tasks:
   - name: printing the variables
     ansible.builtin.debug:
-      msg: "this is the mohan"
+      msg: "this is the mohan{name}"
