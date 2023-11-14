@@ -5,4 +5,4 @@
   tasks:
   - name: printing the variables
     ansible.builtin.debug:
-      msg: "this is the mohan{name}"
+      msg: "this is the mohan{{name}}"
