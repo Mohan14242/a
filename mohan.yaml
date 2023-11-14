@@ -2,12 +2,12 @@
   hosts: localhost
   vars:
   address:
-    - name: mohan
-      age: 25
-      salary: 40000
-    - name: chiru
-      age: 30
-      salary: 50000
+  - name: mohan
+    age: 25
+    salary: 40000
+  - name: chiru
+    age: 30
+    salary: 50000
 
 
 
