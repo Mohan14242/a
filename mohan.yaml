@@ -1,8 +1,13 @@
 - name: testing the variables
-  hosts: node
+  hosts: localhost
+  vars_prompt:
+    - name: name
+      prompt: please enter your name 
+
+
   tasks:
   - name: displaying the multiple variables
     ansible.builtin.debug:
-      msg: "my name is {{name}} and and my age is"
+      msg: "your sting is converted into the upper case{{name | upper}}"
 
  
