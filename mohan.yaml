@@ -1,5 +1,7 @@
 - name: testing the variables
-  hosts: node
+  hosts: locahost
   tasks:
-  - name: pininging the server
-    ansible.builtin.ping:
+  - name: getting the variables from the command line
+    annsible.builtin.debug:
+      msg: "the variable from the command line is {{name}}"
+  
