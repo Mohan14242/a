@@ -1,6 +1,5 @@
 - name: testing the variables
   hosts: node
-  
   tasks:
   - name: displaying the multiple variables
     ansible.builtin.debug:
