@@ -1,11 +1,9 @@
 - name: testing the variables
   hosts: node
-  vars:
-    name: mohan
-    age: 25
+  
   tasks:
   - name: displaying the multiple variables
     ansible.builtin.debug:
-      msg: "my name is {{name}} and and my age is {{age}}"
+      msg: "my name is {{name}} and and my age is"
 
  
