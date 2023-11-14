@@ -1,10 +1,16 @@
 - name: testing the variables
   hosts: localhost
   vars:
-  - address:
-    name: mohan
-    age:20
-    salary: 40000
+  address:
+    - name: mohan
+      age: 25
+      salary: 40000
+    - name: chiru
+      age: 30
+      salary: 50000
+
+
+
       
   tasks:
   - name: printing the variables
