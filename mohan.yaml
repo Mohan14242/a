@@ -2,6 +2,6 @@
   hosts: localhost
   tasks:
   - name: getting the variables from the command line
-    annsible.builtin.debug:
+    ansible.builtin.debug:
       msg: "the variable from the command line is {{name}}"
   
