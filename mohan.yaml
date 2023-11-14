@@ -15,5 +15,6 @@
   - name: printing the variables 
     ansible.builtin.debug:
       msg: "the each value is {{item}}"
-    loop -
-    {{values}}
+    with_items: 
+      - {{values}}
+   
