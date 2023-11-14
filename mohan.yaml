@@ -1,7 +1,11 @@
 - name: testing the variables
   hosts: localhost
+  vars_files:
+    - mohan.yaml
   tasks:
-  - name: getting the variables from the command line
+  - name: displaying the multiple variables
     ansible.builtin.debug:
-      msg: "the variable from the command line is {{name}}"
-  
+      msg: "this is the mohan
+            there is nothin you can do "
+
+ 
