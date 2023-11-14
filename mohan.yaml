@@ -1,11 +1,10 @@
 - name: testing the variables
   hosts: localhost
   vars_files:
-    - mohan.yaml
+    - mohan.yml
   tasks:
   - name: displaying the multiple variables
     ansible.builtin.debug:
-      msg: "this is the mohan
-            there is nothin you can do "
+      msg: "my name is {{name}} and my age is {{age}} and my salary is {{salary}}"
 
  
