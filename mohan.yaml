@@ -8,6 +8,6 @@
   tasks:
   - name: displaying the multiple variables
     ansible.builtin.debug:
-      msg: "your sting is converted into the upper case{{name | upper}}"
+      msg: "your sting is converted into the upper case{{name | split(' ')}}"
 
  
