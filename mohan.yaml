@@ -1,18 +1,5 @@
 - name: testing the variables
-  hosts: localhost
-  vars:
-  address:
-  - name: mohan
-    age: 25
-    salary: 40000
-  - name: chiru
-    age: 30
-    salary: 50000
-
-
-
-      
+  hosts: node
   tasks:
-  - name: printing the variables
-    ansible.builtin.debug:
-      msg: "this is the mohan{{address}}"
+  - name: pininging the server
+    ansible.builtin.ping:
