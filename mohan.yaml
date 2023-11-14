@@ -8,6 +8,12 @@
   tasks:
   - name: displaying the multiple variables
     ansible.builtin.debug:
-      msg: "your sting is converted into the upper case{{name | split(' ')}}"
-
- 
+      msg: "your sting is converted into the upper case{{name}}"
+  - name: stroting the variables into the list
+    ansible.builtin.set_fact:
+      values: "{{name | split(' ')}}"
+  - name: printing the variables 
+    ansible.builtin.debug:
+      msg: "the each value is {{item}}"
+    loop -
+    {{values}}
