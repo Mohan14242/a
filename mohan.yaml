@@ -9,4 +9,4 @@
   - name: printing the valies 
     ansible.builtin.debug:
       msg: "this will only wheen the two values areeuql"
-    when: a>b
+    when: not a>b
