@@ -1,10 +1,13 @@
 - name: basic looping example
   hosts: localhost
   vars:
-    fruits:
+    address:
       name: mohan
-      age: 25
-      add: ganagavaram
+        age: 25
+        address: gangavaram
+      name: vijay
+        age: 25
+        address: palamaner
   tasks:
   - name: print the message
     ansible.builtin.debug:
