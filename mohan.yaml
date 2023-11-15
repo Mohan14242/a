@@ -2,10 +2,10 @@
   hosts: localhost
   vars:
     address:
-      name: mohan
+      mohan
         age: 25
         address: gangavaram
-      name: vijay
+      vijay
         age: 25
         address: palamaner
   tasks:
