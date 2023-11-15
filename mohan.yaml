@@ -2,9 +2,9 @@
   hosts: localhost
   vars:
     fruits:
-      - apple
-      - banana
-      - orange
+      name: mohan
+      age: 25
+      add: ganagavaram
   tasks:
   - name: print the message
     ansible.builtin.debug:
