@@ -8,5 +8,6 @@
   tasks:
   - name: printing the valies 
     ansible.builtin.debug:
-      msg: "this will only wheen the two values areeuql"
-    when: not a>b
+      msg: " installling theansible"
+    when: "ansi" in (a or b)
+      
