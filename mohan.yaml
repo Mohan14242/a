@@ -8,7 +8,7 @@
   tasks:
   - name: print the message
     ansible.builtin.debug:
-      msg: "the fruint{{item}}"
+      msg: "the fruint{{item.key }} and {{item.value}}"
     with_items: "{{fruits | dict2items}}"
 
      
