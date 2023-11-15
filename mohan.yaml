@@ -1,26 +1,9 @@
 - name: basic looping example
   hosts: localhost
-  vars:
-    name:
-      - mohan
-      - chiru
-      - vijay
-    age: 
-      - 25
-      - 26
-      - 27
-    salary:
-      - 100000
-      - 200000
-      - 300000
-    
   tasks:
-  - name: print the message
+  - name: check the roboshop user exit or not
+    ansible.builtin.command: id roboshop
+    register: output
+  - name: print the variable values
     ansible.builtin.debug:
-      msg: "the fruint{{item.0 }} and {{item.1}} and salary is {{item.2}}"
-    with_together: 
-      - "{{name}}"
-      - "{{age}}"
-      - "{{salary}}"
-     
-
+      msg: "{{output}}"
