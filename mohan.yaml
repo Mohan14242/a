@@ -1,14 +1,7 @@
-- name: testing the variables
+- name: basic looping example
   hosts: localhost
-  vars_prompt:
-    - name: a
-      prompt: enter a values
-    - name: b
-      prompt: enter the b value
   tasks:
-  - name: printing the valies 
+  - name: print the message
     ansible.builtin.debug:
-      msg: " installling theansible"
-    when: a=="ansible" and b=="mohan"
-    
-      
+      msg: "this is the message {{item}}"
+    with_sequence: start=1 end=5
