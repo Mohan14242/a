@@ -13,6 +13,7 @@
       - 8
       - 9
     combined_list:[]
+    nothing: []
   tasks:
   - name: combning the list
     ansible.builtin.set_fact:
