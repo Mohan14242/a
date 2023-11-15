@@ -1,19 +1,14 @@
 - name: testing the variables
   hosts: localhost
-  vars_prompt:
-    - name: name
-      prompt: please enter your name 
-
-
+  vars:
+    names:
+      - mohan
+      - vijay
+      - chiru
   tasks:
-  - name: displaying the multiple variables
+  - name: variables prpcess
     ansible.builtin.debug:
-      msg: "your sting is converted into the upper case{{name}}"
-  - name: stroting the variables into the list
-    ansible.builtin.set_fact:
-      values: "{{name | split(' ')}}"
-  - name: printing the variables 
-    ansible.builtin.debug:
-      msg: "the each value is {{item}}"
-    with_items: "{{values}}"
+      msg: "these are the friends{{item}}""
+    loop: "{{names}}"
+    
   
