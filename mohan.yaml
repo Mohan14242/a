@@ -17,7 +17,7 @@
   tasks:
   - name: combning the list
     ansible.builtin.set_fact:
-      nothing: "{{combined_list + list1}}"
+      nothing: "{{combined_list + item}}"
     loop: "{{list1}}"
     when: item < 4
   - name: cobinnt the list2
