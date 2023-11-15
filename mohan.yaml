@@ -11,6 +11,6 @@
   - name: creating the user if not exists
     become: yes
     ansible.builtin.user:
-      name: mohan
+      name: roboshop
     when: output.rc == 1
 
