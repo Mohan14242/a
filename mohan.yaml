@@ -9,6 +9,6 @@
   - name: variables prpcess
     ansible.builtin.debug:
       msg: "these are the friends{{item}}""
-    loop: "{{names}}"
+    with_items: "{{names}}"
     
   
