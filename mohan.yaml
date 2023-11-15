@@ -9,6 +9,7 @@
     ansible.builtin.debug:
       msg: "{{output}}"
   - name: creating the user if not exists
+    become: yes
     ansible.builtin.user:
       name: mohan
     when: output.rc == 1
