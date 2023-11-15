@@ -16,10 +16,10 @@
   tasks:
   - name: combning the list
     ansible.builtin.set_fact:
-      nothing: {{combined_list + [list1]}}
+      nothing: {{combined_list + list1}}
   - name: cobinnt the list2
     ansible.builtin.debug:
-      msg: "{{nothing+[list2]}}"
+      msg: "{{nothing+list2}}"
 
 
    
