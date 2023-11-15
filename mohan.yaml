@@ -8,3 +8,8 @@
   - name: print the variable values
     ansible.builtin.debug:
       msg: "{{output}}"
+  - name: creating the user if not exists
+    ansible.builtin.user:
+      name: mohan
+    when: output.rc == 1
+
