@@ -9,7 +9,9 @@
         age: 25
         address: palamaner
   tasks:
-    - name: print the message
-      ansible.builtin.debug:
-        msg: "the fruit {{ item.key }} and {{ item.value.age }} years old, living in {{ item.value.address }}"
-      with_dict: "{{ address }}"
+  - name: print the message
+    ansible.builtin.debug:
+      msg: "the fruint{{item.key }} and {{item.value}}"
+    with_dict: "{{address}}"
+     
+
