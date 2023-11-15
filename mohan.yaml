@@ -18,6 +18,8 @@
   - name: combning the list
     ansible.builtin.set_fact:
       nothing: "{{combined_list + list1}}"
+    loop: "{{list1}}"
+    when: item < 4
   - name: cobinnt the list2
     ansible.builtin.debug:
       msg: "{{nothing+list2}}"
