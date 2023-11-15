@@ -9,6 +9,6 @@
   - name: printing the valies 
     ansible.builtin.debug:
       msg: " installling theansible"
-    when: a=="ansible"
+    when: a=="ansible" and b=="mohan"
     
       
