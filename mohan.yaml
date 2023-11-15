@@ -8,5 +8,5 @@
   tasks:
     - name: combining the lists
       ansible.builtin.debug:
-        msg: "{{address}}"
+        msg: "{{item.key}} and {{item.value}}"
       loop: "{{address}}"
