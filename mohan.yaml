@@ -2,14 +2,15 @@
   hosts: localhost
   vars:
     details:
-      mohan:25
-      chiru:25
-      vijay:30
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      
    
   tasks:
   - name: variables prpcess
     ansible.builtin.debug:
-      msg: "these are the friends{{item.key}} and {{item.value}}"
-    loop: "{{details}}"
-    
-  
+      msg: " length of my list{{details | length}} and the first element is {{details | first }} and last element {{details | last}} and selecting the even elements {{details | select('even')}} and the odd the elements are {{details | select('odd')}}"
+   
