@@ -1,17 +1,21 @@
 - name: basic looping example
   hosts: localhost
   vars:
-    address:
-      mohan:
-        age: 25
-        address: gangavaram
-      vijay:
-        age: 25
-        address: palamaner
+    name:
+      - mohan
+      - chiru
+      - vijay
+    age: 
+      - 25
+      - 26
+      - 27
+    
   tasks:
   - name: print the message
     ansible.builtin.debug:
-      msg: "the fruint{{item.key }} and {{item.value}}"
-    with_dict: "{{address}}"
+      msg: "the fruint{{item.0 }} and {{item.1}}"
+    with_together: 
+      - "{{name}}"
+      - "{{age}}"
      
 
