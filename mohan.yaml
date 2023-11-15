@@ -9,13 +9,18 @@
       - 25
       - 26
       - 27
+    salary:
+      - 100000
+      - 200000
+      - 300000
     
   tasks:
   - name: print the message
     ansible.builtin.debug:
-      msg: "the fruint{{item.0 }} and {{item.1}}"
+      msg: "the fruint{{item.0 }} and {{item.1}} and salary is {{item.2}}"
     with_together: 
       - "{{name}}"
       - "{{age}}"
+      - "{{salary}}"
      
 
