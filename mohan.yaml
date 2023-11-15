@@ -12,5 +12,5 @@
   - name: print the message
     ansible.builtin.debug:
       msg: "the fruint{{item.key }} and {{item.value}}"
-    with_dict: "{{fruits}}"
+    with_dict: "{{address}}"
      
