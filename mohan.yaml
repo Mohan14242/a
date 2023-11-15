@@ -7,7 +7,7 @@
   tasks:
   - name: combining the lsits
     ansible.builtin.set_fact:
-      combined : {{combined | union(list1,list2)}}
+      combined : "{{combined | union(list1,list2)}}"
   - name: displying the lsits 
     ansible.builtin.debug:
       msg: "this is the combined list{{combined}}"
