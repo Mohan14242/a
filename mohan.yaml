@@ -1,12 +1,12 @@
 - name: testing the variables
   hosts: localhost
-  vars:
-    address:
-      name: mohan
-      age: 24
-      per: ganagavram
+  vars_prompt:
+    - name: a
+      prompt: enter a values
+    - name: b
+      prompt: enter the b value
   tasks:
-    - name: combining the lists
-      ansible.builtin.debug:
-        msg: "{{item}}"
-      loop: "{{address}}"
+  - name: printing the valies 
+    ansible.builtin.debug:
+      msg: "this will only wheen the two values areeuql"
+    when: a>b
