@@ -1,14 +1,15 @@
 - name: testing the variables
   hosts: localhost
   vars:
-    names:
-      - mohan
-      - vijay
-      - chiru
+    details:
+      mohan:25
+      chiru:25
+      vijay:30
+   
   tasks:
   - name: variables prpcess
     ansible.builtin.debug:
-      msg: "these are the friends{{item}}"
-    loop: "{{names}}"
+      msg: "these are the friends{{item.key}} and {{item.value}}"
+    loop: "{{details}}"
     
   
