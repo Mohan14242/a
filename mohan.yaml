@@ -9,3 +9,4 @@
     - name: combining the lists
       ansible.builtin.debug:
         msg: "{{address}}"
+      loop: "{{address}}"
