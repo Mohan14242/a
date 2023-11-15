@@ -8,7 +8,7 @@
   tasks:
   - name: variables prpcess
     ansible.builtin.debug:
-      msg: "these are the friends{{item}}""
+      msg: "these are the friends{{item}}"
     with_items: "{{names}}"
     
   
