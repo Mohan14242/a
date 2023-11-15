@@ -9,6 +9,6 @@
   - name: print the message
     ansible.builtin.debug:
       msg: "the fruint{{item}}"
-    loop: "{{fruits}}"
+    with_items: "{{fruits}}"
 
      
