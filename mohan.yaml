@@ -1,7 +1,8 @@
 - name: uing the error hanling conditions 
   hosts: node1
   tasks:
-  - name: tagging the tasks 
+  - name: tagging the tasks
+    become: yes 
     ansible.builtin.yum:
       name: nginx
       state: installed
