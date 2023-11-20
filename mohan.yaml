@@ -1,0 +1,7 @@
+- name: uing the error hanling conditions 
+  hosts: node1
+  tasks:
+  - name: checking the file exists or not
+    ansible.builtin.stat:
+      path: /home/centos/mohan.txt
+    failed_when: result.stat.exists == false 
