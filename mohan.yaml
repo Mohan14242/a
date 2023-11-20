@@ -4,6 +4,7 @@
   - name: printing the file contents
     ansible.builtin.command: cat mohan.txt
     register: output
+    failed_when: output.rc == 0
   - name: priting the output
     ansible.builtin.debug:
       msg: "{{output}}"
