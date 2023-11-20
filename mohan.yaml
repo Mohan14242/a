@@ -8,6 +8,7 @@
       state: installed
     tags:
       - install 
+      - installed
   - name: remving the nginx 
     become: yes
     ansible.builtin.yum:
