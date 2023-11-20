@@ -1,9 +1,9 @@
 - name: uing the error hanling conditions 
   hosts: node1
   tasks:
-  - name: getting the file commnad
-    ansible.builtin.command: /home/centod/mohan.txt
-      register: result
-  - name: the getting the name
+  - name: printing the file contents
+    ansible.builtin.command: cat mohan.txt
+      register: output
+  - name: priting the output
     ansible.builtin.debug:
-      msg: 'this is the output {{result}}'
+      msg: "{{output}}"
