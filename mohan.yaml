@@ -1,10 +1,8 @@
 - name: uing the error hanling conditions 
   hosts: node1
   tasks:
-  - name: printing the file contents
-    ansible.builtin.command: cat mohan.txt
-    register: output
-    failed_when: output.rc == 0
-  - name: priting the output
+  - name: dispzying the ansible built in facts 
     ansible.builtin.debug:
-      msg: "{{output}}"
+      msg: " the ansible hostname {{ansible_hostname}}
+            the ip addresss {{ansible_default_ipv4.address}} and os family is {{ansible_os_family}}"
+ 
