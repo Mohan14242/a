@@ -3,7 +3,7 @@
   tasks:
   - name: printing the file contents
     ansible.builtin.command: cat mohan.txt
-      register: output
+    register: output
   - name: priting the output
     ansible.builtin.debug:
       msg: "{{output}}"
