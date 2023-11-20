@@ -9,6 +9,7 @@
     tags:
       - install 
   - name: remving the nginx 
+    become: yes
     ansible.builtin.yum:
       name: nginx 
       state: absent 
